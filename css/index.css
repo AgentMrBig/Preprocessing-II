@@ -2,18 +2,6 @@
   list-style-type: none;
   text-decoration: none;
 }
-/*
-.flexCon(@direction:row; 
-@justifyContent:space-around;
- @alignItems:center; 
- @alignContent:flex-start){
-    display: flex;
-    flex-direction: @direction;
-    justify-content: @justifyContent;
-    align-items: @alignItems;
-    align-content: @alignContent;
-}
-*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -286,25 +274,30 @@ nav{
 
 
 */
-nav {
+.navContainer {
+  width: 100%;
+  border-bottom: dashed 2px lightgrey;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   align-content: flex-start;
-  border-bottom: dashed 2px lightgrey;
-  max-width: 800px;
+}
+.navContainer nav {
+  max-width: 100%;
   margin: 0 auto;
 }
-nav ul {
+.navContainer nav ul {
+  margin-left: 7rem;
+  margin-right: 7rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   align-content: flex-right;
-  width: 100%;
+  max-width: 800px;
 }
-nav ul h1 {
+.navContainer nav ul h1 {
   align-self: center;
   list-style-type: none;
   text-decoration: none;
@@ -312,10 +305,10 @@ nav ul h1 {
   text-align: left;
   width: 500px;
 }
-nav ul h1 a {
+.navContainer nav ul h1 a {
   width: 10rem;
 }
-nav ul li {
+.navContainer nav ul li {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -330,31 +323,31 @@ nav ul li {
   transform: translateX(100rem);
   animation: slideIn 0.5s forwards;
 }
-nav ul li:nth-child(1) {
+.navContainer nav ul li:nth-child(1) {
   animation-delay: 0s;
 }
-nav ul li:nth-child(2) {
+.navContainer nav ul li:nth-child(2) {
   animation-delay: 0s;
 }
-nav ul li:nth-child(3) {
+.navContainer nav ul li:nth-child(3) {
   animation-delay: 0.5s;
 }
-nav ul li:nth-child(4) {
+.navContainer nav ul li:nth-child(4) {
   animation-delay: 1s;
 }
-nav ul li:nth-child(5) {
+.navContainer nav ul li:nth-child(5) {
   animation-delay: 1.5s;
 }
-nav ul li:nth-child(2) {
+.navContainer nav ul li:nth-child(2) {
   margin-left: 12.7rem;
   padding-left: 0rem;
 }
-nav ul li:nth-child(5) {
+.navContainer nav ul li:nth-child(5) {
   text-align: right;
   margin-right: 0rem;
   padding-right: 0rem;
 }
-nav ul li a {
+.navContainer nav ul li a {
   align-self: center;
   text-align: center;
   list-style-type: none;
@@ -366,8 +359,8 @@ nav ul li a {
   width: 8rem;
   position: relative;
 }
-nav ul li a::before,
-nav ul li a::after {
+.navContainer nav ul li a::before,
+.navContainer nav ul li a::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -377,16 +370,16 @@ nav ul li a::after {
   transform: scaleX(0);
   transition: all 0.5s;
 }
-nav ul li a::before {
+.navContainer nav ul li a::before {
   top: 0;
   transform-origin: left;
 }
-nav ul li a::after {
+.navContainer nav ul li a::after {
   bottom: 0;
   transform-origin: right;
 }
-nav ul li a:hover::before,
-nav ul li a:hover::after {
+.navContainer nav ul li a:hover::before,
+.navContainer nav ul li a:hover::after {
   transform: scaleX(1);
 }
 .footer {
@@ -410,13 +403,18 @@ header {
   margin: 0 auto;
   max-width: 800px;
 }
+header section img {
+  margin-bottom: 20px;
+}
+header section .text-content h2 {
+  marting-top: 20px;
+}
 .home .content-section {
   margin: 30px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 800px;
-  border: solid 1px green;
 }
 .home .content-section .text-content {
   width: 48%;
@@ -457,4 +455,13 @@ header {
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+.home .content-pick .destination .btn {
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 13pt;
+  background-color: #007676;
+  text-align: center;
+  padding: 1.5rem;
 }

@@ -5,9 +5,20 @@ header{
   margin: 0 auto;
   max-width:@maxWidth;
 
-  .section{
+  section{
     
+    img{
+      margin-bottom: 20px;
+    }
+    .text-content{
+      h2{
+        marting-top: 20px;
+      }
+    }
   }
+  
+  
+  
 
 }
 .home {
@@ -18,7 +29,7 @@ header{
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: @maxWidth;
-    border: solid 1px green;
+    
     
     .text-content {
       width: 48%;
@@ -28,7 +39,7 @@ header{
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+      
       img {
         border-radius: 10px;
       }
@@ -68,6 +79,11 @@ header{
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      .btn{
+        .buttonMaster(white, 10px, 13pt, darken(teal, 2%));
+
+        
+      }
     }
   }
 }// home

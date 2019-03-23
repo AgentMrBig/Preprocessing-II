@@ -1,5 +1,8 @@
 // Mixins in here
 
+.debug(@color){
+    border: solid 1px @color;
+}
 .linkListNoStyle{
     list-style-type: none;
     text-decoration: none;
@@ -14,18 +17,6 @@
     padding-top: @padding;
     padding-bottom: @padding;
 }
-/*
-.flexCon(@direction:row; 
-@justifyContent:space-around;
- @alignItems:center; 
- @alignContent:flex-start){
-    display: flex;
-    flex-direction: @direction;
-    justify-content: @justifyContent;
-    align-items: @alignItems;
-    align-content: @alignContent;
-}
-*/
 
 // Parametric mixin for flexbox styling
 .flexCon(@direction:row; 
@@ -42,6 +33,16 @@
 
 .flexItem(@align-self){
   align-self: @align-self;
+}
+
+.buttonMaster(@txtColor; @bdrad; @fontPt; @bgColor){
+    text-decoration: none;
+    color: @txtColor;
+    border-radius: @bdrad;
+    font-size: @fontPt;
+    background-color: @bgColor;
+    text-align: center;
+    padding: 1.5rem;
 }
 
 
