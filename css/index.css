@@ -1,1 +1,460 @@
-/* LESS needs to be processed */
+.linkListNoStyle {
+  list-style-type: none;
+  text-decoration: none;
+}
+/*
+.flexCon(@direction:row; 
+@justifyContent:space-around;
+ @alignItems:center; 
+ @alignContent:flex-start){
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justifyContent;
+    align-items: @alignItems;
+    align-content: @alignContent;
+}
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Indie Flower', cursive;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+  padding-bottom: 10px;
+}
+h4 {
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
+p {
+  line-height: 1.5;
+  font-size: 1.6rem;
+  padding-bottom: 10px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+a {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+}
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+.brand {
+  font-size: 3rem;
+  font-weight: 300;
+  transform: translateX(-100rem);
+  animation: slideIn 0.5s forwards;
+}
+.listNoStyle {
+  text-decoration: none;
+  list-style-type: none;
+}
+/*
+// Parametric mixin for flexbox styling
+.flexCon(@direction:row; @justifyContent:space-around; @alignItems:center; @alignContent:flex-start){
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justifyContent;
+    align-items: @alignItems;
+    align-content: @alignContent;
+}
+
+
+.flexItem(@align-self){
+  align-self: @align-self;
+}
+
+nav{
+  
+  ul{
+    .flexCon();
+    li{
+        transform: translateX(100rem);
+	animation: slideIn .5s forwards;
+      &:nth-child(1){
+        animation-delay: 0s;
+      }
+      &:nth-child(2){
+        animation-delay: 0s;
+      }
+      &:nth-child(3){
+        animation-delay: .5s;
+      }
+      &:nth-child(4){
+        animation-delay: 1s;
+      }
+      &:nth-child(5){
+        animation-delay: 1.5s;
+      }
+      
+      a{
+        padding: 5px;
+        
+        text-transform: uppercase;
+        color: white;
+        .listNoStyle;
+        letter-spacing: 2px;
+        position: relative;
+        
+        &::before,
+        &::after{
+         
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 4px;
+          background-color: darken(crimson, 10%);
+          left: 0;
+          transform: scaleX(0);
+          transition: all .5s;
+        }
+        
+        &::before{
+          top: 0;
+          transform-origin: left;
+        }
+        
+        &::after{
+          bottom: 0;
+          transform-origin: right;
+        }
+        
+        &:hover::before,
+        &:hover::after{
+          transform: scaleX(1);
+        }
+        
+      }
+    }
+  }
+}
+
+
+*/
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: flex-start;
+  border-bottom: dashed 2px lightgrey;
+  max-width: 800px;
+  margin: 0 auto;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: flex-right;
+  width: 100%;
+}
+nav ul h1 {
+  align-self: center;
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  text-align: left;
+  width: 500px;
+}
+nav ul h1 a {
+  width: 10rem;
+}
+nav ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: flex-start;
+  padding: 1rem;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transform: translateX(100rem);
+  animation: slideIn 0.5s forwards;
+}
+nav ul li:nth-child(1) {
+  animation-delay: 0s;
+}
+nav ul li:nth-child(2) {
+  animation-delay: 0s;
+}
+nav ul li:nth-child(3) {
+  animation-delay: 0.5s;
+}
+nav ul li:nth-child(4) {
+  animation-delay: 1s;
+}
+nav ul li:nth-child(5) {
+  animation-delay: 1.5s;
+}
+nav ul li:nth-child(2) {
+  margin-left: 12.7rem;
+  padding-left: 0rem;
+}
+nav ul li:nth-child(5) {
+  text-align: right;
+  margin-right: 0rem;
+  padding-right: 0rem;
+}
+nav ul li a {
+  align-self: center;
+  text-align: center;
+  list-style-type: none;
+  text-decoration: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: black;
+  text-transform: uppercase;
+  width: 8rem;
+  position: relative;
+}
+nav ul li a::before,
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #86c5da;
+  left: 0;
+  transform: scaleX(0);
+  transition: all 0.5s;
+}
+nav ul li a::before {
+  top: 0;
+  transform-origin: left;
+}
+nav ul li a::after {
+  bottom: 0;
+  transform-origin: right;
+}
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+.footer {
+  width: 100%;
+  border-top: 2px dashed silver;
+  background: #FFEBCD;
+}
+.footer p {
+  text-align: center;
+  color: #212529;
+  font-size: 1.6rem;
+  padding: 20px;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: flex-start;
+  border-bottom: dashed 2px lightgrey;
+  margin: 0 auto;
+  max-width: 800px;
+}
+.home .content-section {
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 800px;
+  border: solid 1px green;
+}
+.home .content-section .text-content {
+  width: 48%;
+  padding-right: 1%;
+}
+.home .content-section .img-content {
+  width: 48%;
+  padding-left: 1%;
+}
+.home .content-section .img-content img {
+  border-radius: 10px;
+}
+.home .inverse-content {
+  padding-bottom: 30px;
+  border-bottom: 2px dashed #C0C0C0;
+}
+.home .inverse-content .text-content {
+  padding-left: 1%;
+  padding-right: 0;
+}
+.home .inverse-content .img-content {
+  padding-right: 1%;
+  padding-left: 0;
+}
+.home .content-destination {
+  width: 75%;
+  margin: 0 auto 30px;
+}
+.home .content-destination img {
+  border-radius: 10px;
+}
+.home .content-pick {
+  padding-top: 30px;
+  border-top: 2px dashed #C0C0C0;
+  display: flex;
+  justify-content: space-between;
+}
+.home .content-pick .destination {
+  width: 30%;
+  margin-bottom: 30px;
+}
