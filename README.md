@@ -1,4 +1,4 @@
-![preview img](https://github.com/AgentMrBig/Preprocessing-II/blob/Eric-Hendrix/img/preprocessing2preview.png)
+![preview img](https://github.com/AgentMrBig/Preprocessing-II/blob/Eric-Hendrix/img/preprocessing2fixpreview.png)
 
 # Preprocessing II: Fun Bus Website
 
