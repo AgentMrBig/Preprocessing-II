@@ -1,9 +1,14 @@
 
 header{
+  overflow: hidden;
   .flexCon;
   border-bottom: dashed 2px lightgrey;
   margin: 0 auto;
-  max-width:@maxWidth;
+  max-width:@desktopPx;
+  @media @mobile{
+    .mobilePaddingLeftRight(4rem);
+  }
+ 
 
   section{
     
@@ -22,23 +27,46 @@ header{
 
 }
 .home {
+  overflow: hidden;
+  @media @mobile{
+    .mobilePaddingLeftRight(1rem);
+    
+  }
   
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: @maxWidth;
+    max-width: @desktop;
+    @media @mobile{
+      .flexConCol;
+      width: 100%;
+      margin: 0 auto 30px;
+      padding-right:3rem;
+      padding-left:3rem;
+    }
     
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile{
+        width: 100%;
+        
+        
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobile{
+        width:100%;
+        text-align: center;
+        padding-left: 0px;
+        margin-bottom: 2rem;
+      }
       
       img {
         border-radius: 10px;
@@ -75,14 +103,28 @@ header{
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @mobile{
+      .flexConCol;
+      width: 100%;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @mobile{
+        .flexConCol;
+        width: 100%;
+        margin: 0 auto 30px;
+        padding-right:3rem;
+        padding-left:3rem;
+      }
       .btn{
-        .buttonMaster(white, 10px, 13pt, darken(teal, 2%));
+        .buttonMaster(white, 10px, 13pt, darken(@buttonBg, 2%));
 
-        
+        @media @mobile{
+          .buttonMaster(white, 10px, 13pt, lighten(@buttonBg, 5%));
+          
+        }
       }
     }
   }

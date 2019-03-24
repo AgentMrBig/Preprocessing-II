@@ -12,8 +12,15 @@
 @shark: #212529;
 @eastern-blue: #17A2B8;
 @sandy-beach: #FFEBCD;
+@buttonBg: teal;
 
 // Content Sizes
-@maxWidth: 800px;
-@max-width: @maxWidth;
+@fix-mqs: false;
+@old-ie: false;
+
+@desktopPx: 800px;
+// LESS escaping
+@desktop: ~"(min-width: 800px)";
+@tablet: ~"(max-width: 768px)";
+@mobile: ~"(max-width: 500px)";
 

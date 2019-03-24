@@ -1,121 +1,77 @@
 // Navigation Styles here
 
-.brand {
-  font-size: 3rem;
-  font-weight: 300;
-  transform: translateX(-100rem);
-  animation: slideIn 0.5s forwards;
-}
+
 
 .listNoStyle {
   text-decoration: none;
   list-style-type: none;
 }
 
-/*
-// Parametric mixin for flexbox styling
-.flexCon(@direction:row; @justifyContent:space-around; @alignItems:center; @alignContent:flex-start){
-    display: flex;
-    flex-direction: @direction;
-    justify-content: @justifyContent;
-    align-items: @alignItems;
-    align-content: @alignContent;
-}
 
-
-.flexItem(@align-self){
-  align-self: @align-self;
-}
-
-nav{
-  
-  ul{
-    .flexCon();
-    li{
-        transform: translateX(100rem);
-	animation: slideIn .5s forwards;
-      &:nth-child(1){
-        animation-delay: 0s;
-      }
-      &:nth-child(2){
-        animation-delay: 0s;
-      }
-      &:nth-child(3){
-        animation-delay: .5s;
-      }
-      &:nth-child(4){
-        animation-delay: 1s;
-      }
-      &:nth-child(5){
-        animation-delay: 1.5s;
-      }
-      
-      a{
-        padding: 5px;
-        
-        text-transform: uppercase;
-        color: white;
-        .listNoStyle;
-        letter-spacing: 2px;
-        position: relative;
-        
-        &::before,
-        &::after{
-         
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 4px;
-          background-color: darken(crimson, 10%);
-          left: 0;
-          transform: scaleX(0);
-          transition: all .5s;
-        }
-        
-        &::before{
-          top: 0;
-          transform-origin: left;
-        }
-        
-        &::after{
-          bottom: 0;
-          transform-origin: right;
-        }
-        
-        &:hover::before,
-        &:hover::after{
-          transform: scaleX(1);
-        }
-        
-      }
-    }
-  }
-}
-
-
-*/
 .navContainer {
+  overflow: hidden;
   width: 100%;
   border-bottom: dashed 2px lightgrey;
-  .flexCon;
+  .flexCon(column, space-around, center, center);
+  @media @mobile{
+    
+  }
+
+  
+  
   nav {
-    max-width: 100%;
+    width: @desktopPx;
     margin: 0 auto;
 
+
     ul {
+      
       margin-left: 7rem;
       margin-right: 7rem;
       align-items: center;
       .flexCon(row, flex-end, center, flex-right);
-      max-width: @maxWidth;
+      max-width: @desktopPx;
+      
+      .brand{
+        font-size: 3rem;
+        font-weight: 300;
+        transform: translateX(-100rem);
+        animation: slideIn .5s forwards;
+      }
+
+      @media @mobile {
+        
+        max-width: 500px;
+        flex-wrap: wrap;
+        margin-left: 0rem;
+        
+        
+      }
+
       h1 {
         align-self: center;
         .linkListNoStyle;
         color: black;
         text-align: left;
         width: 500px;
+        font-size: 4rem;
+        font-weight: 300;
+        color: blue;
+        transform: translateX(-100rem);
+        animation: slideIn 0.5s forwards;
+
+        @media @mobile {
+          tex-align: center;
+          .flexCon;
+        }
+          
         a {
-          width: 10rem;
+          width:500px;
+          @media @mobile {
+            tex-align: center;
+            .flexCon;
+            margin-top: 2rem;
+          }
         }
       }
 
@@ -126,6 +82,15 @@ nav{
         margin-top: 2rem;
         margin-bottom: 2rem;
         .navPaddingBetween(1rem);
+        @media @mobile {
+          justify-content: space-around;
+         
+          max-width: 500px;
+          //flex-wrap: wrap;
+          
+          .navPaddingBetween(0.2rem);
+          margin: 0 auto;
+        }
 
         transform: translateX(100rem);
         animation: slideIn 0.5s forwards;
@@ -148,11 +113,20 @@ nav{
         &:nth-child(2) {
           margin-left: 12.7rem;
           padding-left: 0rem;
+          @media @mobile{
+            margin-left: 0.2rem;
+          padding-left: 0rem;
+          }
         }
         &:nth-child(5) {
           text-align: right;
           margin-right: 0rem;
           padding-right: 0rem;
+          @media @mobile{
+            text-align: center;
+            align-self: center;
+            margin-right: 2.5rem;
+          }
         }
 
         a {
